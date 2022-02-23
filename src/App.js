@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+
+
+ const activity = "http://www.boredapi.com/api/activity/"
+
+
+ 
+
+
+
 function App() {
+  const createData = async() => {
+    const response = await fetch(activity);
+    const responseJson = await response.json();
+    return responseJson;
+  }
+  console.log(createData())
+ 
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+     <h1>{createData()}</h1>
+   </div>
   );
 }
 
 export default App;
+
