@@ -52,5 +52,22 @@ tr > a:hover{
   color: red
 }
 
+div {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: rgb(76, 76, 248);
+  color: white;
+  border-radius: 1rem;
+}
+
+button:hover{
+  background-color: green;
+}
 
 

@@ -1,11 +1,14 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 import "../App.css";
+
+
 
 
 export function Activity() {
   const activityName = useParams();
   const { activityData } = useLocation().state;
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -36,6 +39,7 @@ export function Activity() {
           </tr>
         </tbody>
       </table>
+      <button onClick={() => navigate('/')}>Go Back</button>
     </div>
   );
 }
