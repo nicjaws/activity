@@ -1,31 +1,22 @@
+import React, { Component } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import { Activity } from "./Components/Activity";
 
-import './App.css';
-
-
-
- const activity = "http://www.boredapi.com/api/activity/"
-
-
- 
-
-
-
-function App() {
-  const createData = async() => {
-    const response = await fetch(activity);
-    const responseJson = await response.json();
-    return responseJson;
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/activity/:activityId" element={<Activity/>} />
+          </Routes>
+        </Router>
+      </div>
+    );
   }
-  console.log(createData())
- 
-
-
-  return (
-   <div>
-     <h1>{createData()}</h1>
-   </div>
-  );
 }
 
 export default App;
-
