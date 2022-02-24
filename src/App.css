@@ -1,4 +1,56 @@
-* {
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+table {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 3rem;
+flex-direction: column;
+border-collapse: collapse;
+width: 100%;
+
+
 }
+
+tbody {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+td{
+  padding-right: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+}
+
+.alignRight{
+  
+  text-align: right;
+  margin-left: 3rem;
+}
+
+.alignLeft{
+  text-align: left;
+  margin-right: 3rem;
+}
+
+tr{
+  margin-right: 3rem;
+}
+
+tr > a {
+  text-decoration: none;
+  color: black
+}
+
+
+tr > a:hover{
+  color: red
+}
+
+
+

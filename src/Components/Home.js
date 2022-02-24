@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getApiInformation } from "../Services/getApiInformation";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 class Home extends Component {
   state = {
@@ -32,7 +33,7 @@ class Home extends Component {
           >
             <td>{data.activity}</td>
           </Link>
-          <td>{data.price}$</td>
+          <td className="alignRight">{data.price}$</td>
         </tr>
       );
     });
@@ -42,17 +43,15 @@ class Home extends Component {
   render() {
     return (
       <table>
-        <thead>
-          <tr>
-            <td>
-              <h3>Activity</h3>
-            </td>
-            <td>
-              <h3>Price</h3>
-            </td>
-          </tr>
-        </thead>
         <tbody>
+          <tr>
+              <td>
+                <h3>Activity</h3>
+              </td>
+              <td className="alignRight">
+                <h3>Price</h3>
+              </td>
+            </tr>
           {this.state.dataArray.length && this.state.dataArray.length > 0 ? (
             this.getActivitiesList()
           ) : (

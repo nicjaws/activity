@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
+import "../App.css";
+
 
 export function Activity() {
   const activityName = useParams();
@@ -13,24 +15,24 @@ export function Activity() {
         </thead>
         <tbody>
           <tr>
-            <td>Key</td>
-            <td>{activityData.key}</td>
+            <td className="alignLeft">Key</td>
+            <td className="alignRight">{activityData.key}</td>
           </tr>
           <tr>
-            <td>Type</td>
-            <td>{activityData.type}</td>
+            <td className="alignLeft">Type</td>
+            <td className="alignRight">{activityData.type}</td>
           </tr>
           <tr>
-            <td>Price</td>
-            <td>{activityData.price}</td>
+            <td className="alignLeft">Price</td>
+            <td className="alignRight">{activityData.price}</td>
           </tr>
           <tr>
-            <td>Participants</td>
-            <td>{activityData.participants}</td>
+            <td className="alignLeft">Participants</td>
+            <td className="alignRight">{activityData.participants}</td>
           </tr>
           <tr>
-            <td>Link</td>
-            <td>{activityData.link}</td>
+            <td className="alignLeft">Link</td>
+            <td className="alignRight">{activityData.link}</td>
           </tr>
         </tbody>
       </table>
