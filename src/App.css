@@ -70,4 +70,10 @@ button:hover{
   background-color: green;
 }
 
+input{
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
 
