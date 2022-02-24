@@ -8,7 +8,9 @@ export function Activity() {
   return (
     <div>
       <table>
-        <thead>{activityData.activity}</thead>
+        <thead>
+          <h3>{activityData.activity}</h3>
+        </thead>
         <tbody>
           <tr>
             <td>Key</td>

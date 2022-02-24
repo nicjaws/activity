@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getApiInformation } from "../Services/getApiInformation";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   state = {
@@ -22,25 +22,36 @@ class Home extends Component {
   };
 
   getActivitiesList = () => {
-    if (this.state.dataArray.length && this.state.dataArray.length > 0) {
-      let activitiesArray = [];
-      this.state.dataArray.forEach((data) => {
-        activitiesArray.push(
-          <tr>
-            <Link to={`/activity/${data.activity}`} state={{ activityData: data }}>
-                <td>{data.activity}</td>
-            </Link>
-            <td>{data.price}$</td>
-          </tr>
-        );
-      });
-      return activitiesArray;
-    }
+    let activitiesArray = [];
+    this.state.dataArray.forEach((data) => {
+      activitiesArray.push(
+        <tr>
+          <Link
+            to={`/activity/${data.activity}`}
+            state={{ activityData: data }}
+          >
+            <td>{data.activity}</td>
+          </Link>
+          <td>{data.price}$</td>
+        </tr>
+      );
+    });
+    return activitiesArray;
   };
 
   render() {
     return (
       <table>
+        <thead>
+          <tr>
+            <td>
+              <h3>Activity</h3>
+            </td>
+            <td>
+              <h3>Price</h3>
+            </td>
+          </tr>
+        </thead>
         <tbody>
           {this.state.dataArray.length && this.state.dataArray.length > 0 ? (
             this.getActivitiesList()
